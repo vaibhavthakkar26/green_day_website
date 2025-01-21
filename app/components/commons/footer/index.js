@@ -3,6 +3,8 @@ import { footerData } from '../../../../lib/json/layoutData/index'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import TopArrow from '../icons/topArrow'
+import clsx from 'clsx'
 
 const footerdata = footerData
 const Footer = () => {
@@ -32,22 +34,27 @@ const Footer = () => {
     ? { backgroundImage: `url(${backgroundIamge[currentPath]})`, backgroundSize: 'cover', backgroundPosition: 'center' }
     : { backgroundColor: 'black' };
 
+
+  const characters = label.split('');
+  const angleStep = 360 / characters.length;
+
+
   return (
     <div style={backgroundStyle} className=" ">
-      <div className='bg-black/30 pt-[372px]  px-8'>
+      <div className={clsx('   overflow-hidden',isImageBackgroundPage?"bg-black/30 pt-[100px] sm:pt-[180px] md:pt-[290px] lg:pt-[372px]":"pt-[100px]")}>
 
 
         <div className='container '>
-          <div className='flex items-center justify-between w-full pb-[279px]'>
+          <div className='flex md:flex-row flex-col-reverse gap-y-12 items-center justify-between w-full pb-[120px] md:pb-[200px] lg:pb-[279px] '>
 
 
             <div className='w-full max-w-[648px]'>
               <h4 className='font-Dosis font-bold mb-[46px] text-white'>{title}</h4>
               <p className='w-full max-w-[536px] text-base text-white font-OpenSans tracking-[0.65px] pb-[30px]'>{description}</p>
-              <div className='flex items-center justify-between'>
+              <div className='flex lg:flex-row flex-col items-start lg:items-center justify-between gap-y-8'>
                 {
                   ContactUs &&
-                  <div>
+                  <div className='flex flex-col gap-4'>
                     {ContactUs.map((item, index) => {
                       const { icon, name, link } = item || {};
                       return (
@@ -56,7 +63,7 @@ const Footer = () => {
                             <Image src={icon} alt="logo" width={50} height={50} className='w-[25px] h-[25px]' />
                           </div>
                           <div>
-                            <span className='SecondaryDescription text-white'>{name}</span>
+                            <span className='SecondaryDescription text-white font-OpenSans'>{name}</span>
                           </div>
                         </Link>
                       );
@@ -64,7 +71,7 @@ const Footer = () => {
                   </div>
                 }
                 <div>
-                  <p className='SecondaryDescription text-white'>{subtitle}</p>
+                  <p className='SecondaryDescription text-white mb-4 font-OpenSans'>{subtitle}</p>
                   {
                     openTime.map((item, index) => {
                       const { icon, dateTime } = item || {};
@@ -74,7 +81,7 @@ const Footer = () => {
                             <Image src={icon} alt="logo" width={50} height={50} className='w-[25px] h-[25px]' />
                           </div>
                           <div>
-                            <span className='SecondaryDescription text-white'>{dateTime}</span>
+                            <span className='SecondaryDescription text-white font-OpenSans'>{dateTime}</span>
                           </div>
                         </div>
                       );
@@ -97,8 +104,24 @@ const Footer = () => {
                 }
               </div>}
             </div>
-
-            <h4 className='text-white capitalize'>{label}</h4>
+            <div>
+              <div className="relative w-[200px] h-[200px] mx-auto flex items-center justify-center">
+                <div className="absolute inset-0 flex justify-center items-center animate-spin-slow">
+                  {characters.map((char, index) => (
+                    <div
+                      key={index}
+                      className="absolute text-white font-Dosis"
+                      style={{
+                        transform: `rotate(${angleStep * index}deg) translate(90px) rotate(-${angleStep * index}deg)`,
+                      }}
+                    >
+                      <h4 className='text-white  font-Dosis font-semibold'>{char}</h4>
+                    </div>
+                  ))}
+                </div>
+                <TopArrow  className="w-[50px] md:w-[80px] lg:w-[101px] h-[50px] md:h-[80px] lg:h-[101px]"/>
+              </div>
+            </div>
           </div>
           <p className='text-white text-base pt-[30px] border-t-[1px] border-white/10 text-center pb-6'>{copyright}</p>
         </div>

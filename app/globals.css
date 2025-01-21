@@ -58,3 +58,16 @@
     @apply transition ease-in-out duration-300;
   }
 }
+
+.animate-spin-slow{
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}

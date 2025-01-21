@@ -30,7 +30,7 @@ const Header = () => {
     return (
         <div>
             <div className=' container relative z-50'>
-                <div className='flex items-center justify-between pt-[30px] fixed right-0 left-0 w-full max-w-[1320px] mx-auto'>
+                <div className='flex items-center justify-between pt-[30px] fixed right-0 left-0 w-full max-w-[1320px] mx-auto px-5'>
                     <Image src={logo} alt="logo" width={100} height={100} className='w-full max-w-[80px] sm:max-w-[110px] h-[50px] sm:h-[70px] object-cover' />
                     <div onClick={handelClick} className='cursor-pointer'>
                         <ToggelIcon className='w-[34px] h-[18px]' />
