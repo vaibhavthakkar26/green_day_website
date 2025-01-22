@@ -9,6 +9,11 @@
   --lightBlack: #0F0F0F;
 }
 
+body {
+  background-color: #0F0F0F;
+  color: white;
+}
+
 @layer utilities {
   .container {
     @apply w-full max-w-[1360px] mx-auto px-5
@@ -43,11 +48,11 @@
   }
 
   .PrimaryDescription {
-    @apply text-[16px] md:text-[20px]  leading-[34px];
+    @apply text-[16px] md:text-[20px] leading-[34px];
   }
 
   .SecondaryDescription {
-    @apply text-[14px] md:text-[16px]  leading-normal;
+    @apply text-[14px] md:text-[16px] leading-normal;
   }
 
   .caption {
@@ -59,15 +64,16 @@
   }
 }
 
-.animate-spin-slow{
+.animate-spin-slow {
   animation: spin 6s linear infinite;
 }
 
 @keyframes spin {
-  0%{
+  0% {
     transform: rotate(0);
   }
-  100%{
+
+  100% {
     transform: rotate(-360deg);
   }
 }
