@@ -32,7 +32,7 @@ const Footer = () => {
 
   const backgroundStyle = isImageBackgroundPage
     ? { backgroundImage: `url(${backgroundIamge[currentPath]})`, backgroundSize: 'cover', backgroundPosition: 'center' }
-    : { backgroundColor: 'black' };
+    : { backgroundColor: '#0F0F0F' };
 
 
   const characters = label.split('');
@@ -41,11 +41,11 @@ const Footer = () => {
 
   return (
     <div style={backgroundStyle} className=" ">
-      <div className={clsx('   overflow-hidden',isImageBackgroundPage?"bg-black/30 pt-[100px] sm:pt-[180px] md:pt-[290px] lg:pt-[372px]":"pt-[100px]")}>
+      <div className={clsx('   overflow-hidden', isImageBackgroundPage ? "bg-black/30 pt-[100px] sm:pt-[180px] md:pt-[290px] lg:pt-[372px]" : "pt-[100px]")}>
 
 
         <div className='container '>
-          <div className='flex md:flex-row flex-col-reverse gap-y-12 items-center justify-between w-full pb-[120px] md:pb-[200px] lg:pb-[279px] '>
+          <div className={clsx('flex md:flex-row flex-col-reverse gap-y-12 items-center justify-between w-full ',isImageBackgroundPage ?" pb-[120px] md:pb-[200px] lg:pb-[279px]":" pb-[60px] md:pb-[80px] lg:pb-[100px]")}>
 
 
             <div className='w-full max-w-[648px]'>
@@ -119,7 +119,7 @@ const Footer = () => {
                     </div>
                   ))}
                 </div>
-                <TopArrow  className="w-[50px] md:w-[80px] lg:w-[101px] h-[50px] md:h-[80px] lg:h-[101px]"/>
+                <TopArrow className="w-[50px] md:w-[80px] lg:w-[101px] h-[50px] md:h-[80px] lg:h-[101px]" />
               </div>
             </div>
           </div>

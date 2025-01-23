@@ -1,16 +1,36 @@
+"use client";
 import clsx from "clsx";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import PlayIcon from "../commons/icons/playIcon";
 
 const ServiceDetails = ({ deatilsData }) => {
     const { title, listItem, button, imageAndvideo, alignment } = deatilsData || {};
 
-    // Filter the media into separate arrays
     const images = imageAndvideo?.filter((item) => item.type === "image") || [];
     const videos = imageAndvideo?.filter((item) => item.type === "video") || [];
 
+    const [videoControls, setVideoControls] = useState({});
+
+    const handlePlayClick = (index) => {
+        const videoElement = document.getElementById(`video-${index}`);
+        if (videoElement) {
+            videoElement.muted = true;
+            videoElement
+                .play()
+                .then(() => {
+                    setVideoControls((prev) => ({ ...prev, [index]: true }));
+                })
+                .catch((error) => {
+                    console.error("Video playback failed:", error);
+                });
+        } else {
+            console.error(`Video element with ID 'video-${index}' not found.`);
+        }
+    };
+
     return (
-        <div>
+        <div className="pb-[60px] md:pb-[100px]">
             <div className="container">
                 <div
                     className={clsx(
@@ -37,18 +57,27 @@ const ServiceDetails = ({ deatilsData }) => {
                     {/* Media Section */}
                     <div className="w-full">
                         {videos.map((item, index) => (
-                            <div key={index} className="w-full">
+                            <div key={index} className="w-full relative mb-6">
                                 <video
+                                    id={`video-${index}`}
                                     src={item.item}
                                     poster={item.thumbnail}
                                     width={400}
                                     height={400}
-                                    controls
+                                    controls={videoControls[index] || false}
                                     className="w-full h-[280px] lg:h-[318px] object-cover"
                                 />
+                                {!videoControls[index] && (
+                                    <div
+                                        className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] cursor-pointer"
+                                        onClick={() => handlePlayClick(index)}
+                                    >
+                                        <PlayIcon />
+                                    </div>
+                                )}
                             </div>
                         ))}
-                        <div className="columns-1 sm:columns-2 gap-4 w-full max-w-full md:max-w-[648px]">
+                        <div className="columns-1 sm:columns-2 gap-4 w-full max-w-full md:max-w-[655px]">
                             {/* Map Images */}
                             {images.map((item, index) => (
                                 <div key={index} className="w-full mb-4 sm:mb-0">
@@ -57,12 +86,10 @@ const ServiceDetails = ({ deatilsData }) => {
                                         alt=""
                                         width={400}
                                         height={400}
-                                        className="w-full h-[280px] lg:h-[318px] object-cover "
+                                        className="w-full h-[220px] md:h-[280px] lg:h-[318px] object-cover "
                                     />
                                 </div>
                             ))}
-
-                            {/* Map Videos */}
                         </div>
                     </div>
                 </div>
