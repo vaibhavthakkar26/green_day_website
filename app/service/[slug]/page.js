@@ -8,8 +8,6 @@ const SearviceInner = () => {
   const BannerData = serviceInner.shirodharaBannerData
   const deatilsData=serviceInner.serviceDetails
   const instagramPostData=serviceInner.InstagramPostDetails
-
-  console.log(instagramPostData,"llll")
   return (
     <div>
       <InnerBanner BannerData={BannerData} />
