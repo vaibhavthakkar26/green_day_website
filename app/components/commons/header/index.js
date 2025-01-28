@@ -49,9 +49,9 @@ const Header = () => {
                                 <div className='flex flex-col gap-6 pt-[50px] md:pt-[89px]'>
                                     {navitemData.map((item, index) => (
                                         <h4 key={index}>
-                                            <a href={item.link} className='text-white hover:text-white/70 font-Dosis font-semibold basic-transition '>
+                                            <Link href={item.link} className='text-white hover:text-white/70 font-Dosis font-semibold basic-transition '>
                                                 {item.item}
-                                            </a>
+                                            </Link>
                                         </h4>
                                     ))}
                                 </div>
@@ -98,7 +98,7 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className=' absolute right-0 xl:right-[-10%] bottom-[-60px] -z-10'>
+                                <div className=' absolute right-0 1xl:right-[-2%] 3xl:right-[-8%] bottom-[-60px] -z-10'>
                                     <Image src={headerData.image} alt="logo" width={600} height={700} className='w-full max-w-[558px] h-[550px]' />
                                 </div>
                             </div>

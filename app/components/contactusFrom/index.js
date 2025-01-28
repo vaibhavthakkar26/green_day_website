@@ -39,7 +39,7 @@ const ContactUsFrom = ({ contactUsFromData }) => {
                                     <label className='text-base font-OpenSans font-semibold mb-2.5 block'>
                                         {label}
                                     </label>
-                                    <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between GAP-3 p-2.5'>
+                                    <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
                                         <input placeholder={placeholder} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
                                         <Image src={image} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                                     </div>

@@ -2,21 +2,10 @@ import React from 'react'
 
 const PlayIcon = ({ className }) => {
     return (
-        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-            <g filter="url(#filter0_b_20_645)">
-                <circle cx="25" cy="25" r="25" fill="black" fillOpacity="0.1" />
-                <circle cx="25" cy="25" r="24.5" stroke="white" />
-            </g>
-            <path d="M34.409 22.3528C34.8893 22.6082 35.291 22.9895 35.5712 23.4558C35.8514 23.9221 35.9994 24.4558 35.9994 24.9998C35.9994 25.5438 35.8514 26.0775 35.5712 26.5438C35.291 27.0101 34.8893 27.3914 34.409 27.6468L21.597 34.6138C19.534 35.7368 17 34.2768 17 31.9678V18.0328C17 15.7228 19.534 14.2638 21.597 15.3848L34.409 22.3528Z" fill="white" />
-            <defs>
-                <filter id="filter0_b_20_645" x="-34" y="-34" width="118" height="118" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="17" />
-                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_20_645" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_20_645" result="shape" />
-                </filter>
-            </defs>
+        <svg width="38" height="40" viewBox="0 0 38 40" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <path d="M34.818 14.7059C35.7786 15.2167 36.5821 15.9793 37.1424 16.9119C37.7027 17.8444 37.9988 18.9119 37.9988 19.9999C37.9988 21.0879 37.7027 22.1553 37.1424 23.0879C36.5821 24.0205 35.7786 24.7831 34.818 25.2939L9.194 39.2279C5.068 41.4739 0 38.5539 0 33.9359V6.06588C0 1.44588 5.068 -1.47212 9.194 0.769883L34.818 14.7059Z" fill="white" />
         </svg>
+
 
     )
 }
