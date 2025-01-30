@@ -40,7 +40,7 @@ body {
   }
 
   .PrimarySubtitle {
-    @apply text-[24px] leading-[175.797%];
+    @apply text-[20px] md:text-[22px] lg:text-[24px] leading-[175.797%];
   }
 
   .SecondarySubtitle {

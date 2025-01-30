@@ -1,4 +1,4 @@
-import { banner, homeMeassageSection, homeTestimonial, welcomDaySpa } from "../lib/json/pagesData/homePage/index";
+import { banner, homeMeassageSection, homeTestimonial, PriceRatedata, welcomDaySpa } from "../lib/json/pagesData/homePage/index";
 import Banner from "./components/commons/banner";
 import GreenDaySpaSection from "./components/greenDaySpaSection";
 import MeassageSection from "./components/meassageSection";

@@ -9,8 +9,8 @@ function TestimonialSection({ TestimonialData }) {
 
     const { TestimonialSectiondata, image, slider } = TestimonialData || {}
     return (
-        <div className={clsx( "relative z-10" , image?"py-[180px] sm:py-[270px] md:py-[360px] lg:py-[428px]":"pb-[60px] md:pb-[80px] lg:pb-[100px]")} style={{ backgroundImage: `url(${image})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
-                     {image && <div className='bg-black/30 px-8 w-full absolute inset-0 -z-10'></div>}
+        <div className={clsx("relative z-10", image ? "py-[180px] sm:py-[270px] md:py-[360px] lg:py-[428px]" : "pb-[60px] md:pb-[80px] lg:pb-[100px]")} style={{ backgroundImage: `url(${image})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
+            {image && <div className='bg-black/30 px-8 w-full absolute inset-0 -z-10'></div>}
             <div className="container">
                 {slider === true ? <Carousel
                     slidesPerView={1}
