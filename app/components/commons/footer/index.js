@@ -22,7 +22,6 @@ const Footer = () => {
 
   const { ContactUs, copyright, description, label, openTime, socialIcon, title, subtitle } = footerdata || {}
 
-  // Set background image based on the route
   const backgroundIamge = {
     "/": "/images/homeFooterBg.png",
     "/service": "/images/serviceFooterBg.png",
@@ -40,12 +39,12 @@ const Footer = () => {
 
 
   return (
-    <div style={backgroundStyle} className=" ">
+    <div style={backgroundStyle} className=" " >
       <div className={clsx('   overflow-hidden', isImageBackgroundPage ? "bg-black/30 pt-[100px] sm:pt-[180px] md:pt-[290px] lg:pt-[372px]" : "pt-[100px]")}>
 
 
         <div className='container '>
-          <div className={clsx('flex md:flex-row flex-col-reverse gap-y-12 items-center justify-between w-full ',isImageBackgroundPage ?" pb-[120px] md:pb-[200px] lg:pb-[279px]":" pb-[60px] md:pb-[80px] lg:pb-[100px]")}>
+          <div className={clsx('flex md:flex-row flex-col-reverse gap-y-12 items-center justify-between w-full ', isImageBackgroundPage ? " pb-[120px] md:pb-[200px] lg:pb-[279px]" : " pb-[60px] md:pb-[80px] lg:pb-[100px]")}>
 
 
             <div className='w-full max-w-[648px]'>

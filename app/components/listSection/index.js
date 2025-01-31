@@ -12,7 +12,7 @@ const ListSection = ({ ListSectionData }) => {
                 {listItem &&
                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
                         {listItem.map((item, index) => {
-                            const { title, description, mobileNumber, button, vactoreImage, image, link } = item || {}
+                            const { title, description, mobileNumber, button, vactoreImage, image } = item || {}
                             return (
                                 <div key={index} className='bg-white/10 flex lg:flex-row flex-col justify-between gap-4 relative  border-[1px] border-white '>
                                     <div className='pl-5 pt-5 pb-8 lg:pr-0 pr-5 w-full max-w-full lg:max-w-[292px]'>
@@ -30,10 +30,12 @@ const ListSection = ({ ListSectionData }) => {
                                             <div className='flex flex-row items-center gap-5 '>
                                                 {
                                                     button.map((item, index) => {
-                                                        const { label, varient } = item || {}
+                                                        const { label, varient , link} = item || {}
+                                                        const correctedLink = link.startsWith("/") ? link : `/${link}`;
+                                                        console.log(link,"link")
                                                         return (
                                                             <div key={index}>
-                                                                <Button label={label} href={`${link}`} variant={varient} className={clsx("", varient === "grayButton" ? "!text-base !py-1 !px-2.5" : "")} />
+                                                                <Button label={label} href={correctedLink} variant={varient} className={clsx("", varient === "grayButton" ? "!text-base !py-1 !px-2.5" : "")} />
                                                             </div>
                                                         )
                                                     })
