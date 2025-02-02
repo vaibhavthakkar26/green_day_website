@@ -32,7 +32,6 @@ const ListSection = ({ ListSectionData }) => {
                                                     button.map((item, index) => {
                                                         const { label, varient , link} = item || {}
                                                         const correctedLink = link.startsWith("/") ? link : `/${link}`;
-                                                        console.log(link,"link")
                                                         return (
                                                             <div key={index}>
                                                                 <Button label={label} href={correctedLink} variant={varient} className={clsx("", varient === "grayButton" ? "!text-base !py-1 !px-2.5" : "")} />

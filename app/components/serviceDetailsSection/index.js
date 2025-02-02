@@ -32,7 +32,7 @@ const ServiceDetails = ({ deatilsData, className }) => {
                 deatilsData && (
                     <div>
                         {deatilsData.map((item, index) => {
-                            const { title, listItem, button, imageAndvideo1, imageAndvideo2, alignment, variant, description } = item || {};
+                            const { title, listItem, button, imageAndvideo1, imageAndvideo2, alignment, variant, description,link } = item || {};
                             const images1 = imageAndvideo1?.filter((item) => item.type === "image") || [];
                             const videos1 = imageAndvideo1?.filter((item) => item.type === "video") || [];
                             const images2 = imageAndvideo2?.filter((item) => item.type === "image") || [];
@@ -65,7 +65,7 @@ const ServiceDetails = ({ deatilsData, className }) => {
                                                         </ul>
                                                     )
                                                 )}
-                                                <Button label={button} variant={variant} href={`#`} className="mt-[30px]" />
+                                                <Button label={button} variant={variant} href={link?link:`#`} className="mt-[30px]" />
                                             </div>
 
                                             {/* Media Section */}
