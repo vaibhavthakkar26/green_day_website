@@ -30,7 +30,7 @@ const Footer = () => {
   const isImageBackgroundPage = Object.keys(backgroundIamge).includes(currentPath);
 
   const backgroundStyle = isImageBackgroundPage
-    ? { backgroundImage: `url(${backgroundIamge[currentPath]})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+    ? { backgroundImage: `url(${backgroundIamge[currentPath]})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment:"fixed" }
     : { backgroundColor: '#0F0F0F' };
 
 

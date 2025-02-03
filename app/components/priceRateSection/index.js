@@ -16,6 +16,7 @@ const PriceRateSection = ({ PriceRateSectiondata }) => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        backgroundAttachment:"fixed"
       }}
     >
       {image && <div className="bg-black/30 px-8 w-full h-full absolute inset-0 -z-10"></div>}

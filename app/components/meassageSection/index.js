@@ -6,7 +6,7 @@ import clsx from 'clsx'
 const MeassageSection = ({ meassageSectionData }) => {
     const { image, meassageSectionMeassage } = meassageSectionData || {}
     return (
-        <div className={clsx("relative z-10", image ? "py-[200px] sm:py-[290px] md:py-[380px] lg:py-[441px]" : "")} style={{ backgroundImage: `url(${image})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
+        <div className={clsx("relative z-10", image ? "py-[200px] sm:py-[290px] md:py-[380px] lg:py-[441px]" : "")} style={{ backgroundImage: `url(${image})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover",backgroundAttachment:'fixed' }}>
             {image && <div className='bg-black/30 px-8 w-full absolute inset-0 -z-10'></div>}
             <div className='container'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-4'>

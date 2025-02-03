@@ -36,7 +36,7 @@ const Header = () => {
                         <ToggelIcon className='w-[34px] h-[18px]' />
                     </div>
 
-                    <div className={clsx('fixed inset-0 w-full h-screen bg-lightBlack basic-transition pt-[30px] overflow-y-auto pb-20 z-50', toggle ? "translate-x-0 opacity-100" : "translate-x-[100%] opacity-0")}>
+                    <div className={clsx('fixed inset-0 w-full h-screen bg-lightBlack transition-all duration-500 ease-linear pt-[30px] overflow-y-auto pb-20 z-50', toggle ? "translate-x-0 opacity-100" : "translate-x-[100%] opacity-0")}>
                         <div className='container relative'>
                             <div className='flex items-center justify-between'>
                                 <Image src={logo} alt="logo" width={100} height={100} className='w-full max-w-[80px] sm:max-w-[110px] h-[50px] sm:h-[69px] object-cover' />
@@ -46,15 +46,17 @@ const Header = () => {
                             </div>
 
                             <div className='flex em:flex-row flex-col  items-start em:items-center justify-between gap-x-4 gap-y-12 w-full max-w-[850px]'>
+                
                                 <div className='flex flex-col gap-6 pt-[50px] md:pt-[89px]'>
                                     {navitemData.map((item, index) => (
                                         <h4 key={index}>
-                                            <Link href={item.link} className='text-white hover:text-white/70 font-Dosis font-semibold basic-transition '>
+                                            <Link href={item.link} onClick={handelClose} className='text-white hover:text-white/70 font-Dosis font-semibold basic-transition '>
                                                 {item.item}
                                             </Link>
                                         </h4>
                                     ))}
                                 </div>
+
                                 <div>
                                     <div>
                                         <h5 className='text-white mb-[30px] font-Dosis font-medium'>{conatctUsDetails.title}</h5>

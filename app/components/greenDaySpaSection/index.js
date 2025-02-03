@@ -5,7 +5,7 @@ import Image from 'next/image'
 const GreenDaySpaSection = ({ GreenDaySpaData }) => {
     const { title, description, button, varient, bgImage, image } = GreenDaySpaData || {}
     return (
-        <div className='relative z-10 py-[80px] md:py-[140px] lg:py-[152px]' style={{ backgroundImage: `url(${bgImage})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }} >
+        <div className='relative z-10 py-[80px] md:py-[140px] lg:py-[152px]' style={{ backgroundImage: `url(${bgImage})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover",backgroundAttachment:"fixed" }} >
             {bgImage && <div className='bg-black/30 px-8 w-full absolute inset-0 -z-10'></div>}
             <div className='container flex sm:flex-row flex-col items-center justify-center gap-6 lg:gap-8'>
                 <div className='w-full max-w-[635px]'>
