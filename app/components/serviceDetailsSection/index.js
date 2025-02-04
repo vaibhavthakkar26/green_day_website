@@ -30,7 +30,7 @@ const ServiceDetails = ({ deatilsData, className }) => {
         <div className={className}>
             {
                 deatilsData && (
-                    <div>
+                    <div className="overflow-hidden">
                         {deatilsData.map((item, index) => {
                             const { title, listItem, button, imageAndvideo1, imageAndvideo2, alignment, variant, description, link } = item || {};
                             const images1 = imageAndvideo1?.filter((item) => item.type === "image") || [];
@@ -93,13 +93,13 @@ const ServiceDetails = ({ deatilsData, className }) => {
                                                 <div className="flex sm:flex-row flex-col gap-4 sm:gap-6  ">
                                                     {/* Map Images */}
                                                     {images1.map((item, index) => (
-                                                        <div key={index} className="w-full sm:w-fit">
+                                                        <div key={index} className="w-full md:w-fit">
                                                             <Image
                                                                 src={item.item}
                                                                 alt=""
                                                                 width={500}
                                                                 height={400}
-                                                                className="w-full md:w-auto h-[320px] sm:h-full sm:max-h-[380px] object-cover sm:object-contain"
+                                                                className="w-full md:w-auto h-[320px] sm:h-full sm:max-h-[380px] object-cover md:object-contain"
                                                             />
                                                         </div>
                                                     ))}
@@ -127,13 +127,13 @@ const ServiceDetails = ({ deatilsData, className }) => {
                                                 <div className="flex sm:flex-row flex-col gap-4 sm:gap-6   ">
                                                     {/* Map Images */}
                                                     {images2.map((item, index) => (
-                                                        <div key={index} className="w-full sm:w-fit">
+                                                        <div key={index} className="w-full md:w-fit">
                                                             <Image
                                                                 src={item.item}
                                                                 alt=""
                                                                 width={500}
                                                                 height={400}
-                                                                className="w-full md:w-auto h-[320px] sm:h-full sm:max-h-[380px] object-cover sm:object-contain"
+                                                                className="w-full md:w-auto h-[320px] sm:h-full sm:max-h-[380px] object-cover md:object-contain"
                                                             />
                                                         </div>
                                                     ))}
