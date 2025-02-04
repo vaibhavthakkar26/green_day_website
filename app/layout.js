@@ -1,43 +1,3 @@
-// "use client"
-// import { Geist, Geist_Mono } from "next/font/google";
-// import "./globals.css";
-// import Header from "./components/commons/header";
-// import Footer from "./components/commons/footer";
-// import { useRouter } from "next/router";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-
-
-// export default function RootLayout({ children }) {
-//   const router = useRouter();
-//   return (
-//     <html lang="en">
-//       <body
-//         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-//       >
-//       <Header />
-//         {children}
-//         {router.pathname !== '/login' && <Footer />}
-
-//      </body>
-//     </html>
-//   );
-// }
-
-
-
-
-// root-layout.js
-
 "use client";
 
 import { Geist, Geist_Mono } from "next/font/google";
@@ -78,9 +38,7 @@ export default function RootLayout({ children, pageProps }) {
     };
   }, []);
 
-  // Pass pageProps to the useAOS hook
   useAOS(pageProps?.page?._id);
-  // const router = useRouter();
   return (
     <html lang="en">
       <body

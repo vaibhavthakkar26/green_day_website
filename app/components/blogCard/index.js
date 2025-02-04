@@ -21,7 +21,7 @@ const BlogCard = ({ blogCard }) => {
                                     data-aos-delay={index * 300} // 
                                     data-aos-duration="1000">
                                     <div>
-                                        <div className='border-[1px] w-full max-w-full md:max-w-[550px] lg:max-w-[628px] h-[380px] sm:h-[500px] md:h-[560px] lg:h-[628px] border-white relative pb-5 mb-6'>
+                                        {image && <div className='border-[1px] w-full max-w-full md:max-w-[550px] lg:max-w-[628px] h-[380px] sm:h-[500px] md:h-[560px] lg:h-[628px] border-white relative pb-5 mb-6'>
                                             <Image
                                                 src={image}
                                                 alt='image'
@@ -29,13 +29,13 @@ const BlogCard = ({ blogCard }) => {
                                                 height={400}
                                                 className='absolute top-4 -right-4 w-full max-w-full md:max-w-[550px] lg:max-w-[628px] h-[380px] sm:h-[500px] md:h-[560px] lg:h-[628px] object-cover'
                                             />
-                                        </div>
+                                        </div>}
                                         <span className='text-base italic font-OpenSans mb-5 block'>
                                             {authorePublishData}
                                         </span>
-                                        <h4 className='PrimarySubtitle font-Dosis'>{title}</h4>
-                                        <p className='py-5 SecondaryDescription font-OpenSans'>{decription}</p>
-                                        <Button label={button} variant={varient} href={`${link}`} />
+                                        {title && <h4 className='PrimarySubtitle font-Dosis'>{title}</h4>}
+                                        {decription && <p className='py-5 SecondaryDescription font-OpenSans'>{decription}</p>}
+                                        {button && <Button label={button} variant={varient} href={`${link}`} />}
                                     </div>
                                 </div>
                             )

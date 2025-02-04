@@ -32,7 +32,7 @@ const ServiceDetails = ({ deatilsData, className }) => {
                 deatilsData && (
                     <div>
                         {deatilsData.map((item, index) => {
-                            const { title, listItem, button, imageAndvideo1, imageAndvideo2, alignment, variant, description,link } = item || {};
+                            const { title, listItem, button, imageAndvideo1, imageAndvideo2, alignment, variant, description, link } = item || {};
                             const images1 = imageAndvideo1?.filter((item) => item.type === "image") || [];
                             const videos1 = imageAndvideo1?.filter((item) => item.type === "video") || [];
                             const images2 = imageAndvideo2?.filter((item) => item.type === "image") || [];
@@ -47,7 +47,7 @@ const ServiceDetails = ({ deatilsData, className }) => {
                                             )}
                                         >
                                             <div className="w-full max-w-[648px] flex flex-col items-start" data-aos="fade-right">
-                                                <h4 className="font-Dosis font-bold">{title}</h4>
+                                                {title && <h4 className="font-Dosis font-bold">{title}</h4>}
 
                                                 {description ? (
                                                     <p
@@ -59,13 +59,13 @@ const ServiceDetails = ({ deatilsData, className }) => {
                                                         <ul className="flex flex-col list-disc pl-6 mt-5">
                                                             {listItem.map((item, index) => (
                                                                 <li key={index}>
-                                                                    <span className="SecondaryDescription font-OpenSans tracking-[0.65px]">{item.list}</span>
+                                                                    {item.list && <span className="SecondaryDescription font-OpenSans tracking-[0.65px]">{item.list}</span>}
                                                                 </li>
                                                             ))}
                                                         </ul>
                                                     )
                                                 )}
-                                                <Button label={button} variant={variant} href={link?link:`#`} className="mt-[30px]" />
+                                                {button && <Button label={button} variant={variant} href={link ? link : `#`} className="mt-[30px]" />}
                                             </div>
 
                                             {/* Media Section */}

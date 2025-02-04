@@ -3,9 +3,6 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import DownArrow from '../components/commons/icons/downArrow';
 import Button from '../components/commons/button';
-import PluseIcon from '../components/commons/icons/pluseIcon';
-import MoreIcon from '../components/commons/icons/moreIcon';
-import clsx from 'clsx';
 
 const MembershipManagement = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -107,18 +104,18 @@ const MembershipManagement = () => {
                         )}
                     </div>
                     <div className='w-full max-w-[872px]'>
-                    <h5 className='text-[26px] md:text-[30px] lg:text-[35px] font-Dosis font-semibold'>{`Membership Management`}</h5>
-             <div className='w-full bg-white/10 p-2.5 mt-[30px]'>
-             <h6 className='text-[26px] md:text-[30px] lg:text-[35px] font-Dosis font-semibold'>{`Current Membership`}</h6>
-             <div className='flex items-center gap-2.5 my-2.5'>
-                <Image src={"/images/platinum.svg"} alt="image" width={30} height={30} className='w-[24px] h-[24px]' />
-                <span className='text-nase font-OpenSans'>{`Platinum Plan`}</span>
-             </div>
-             <div className='flex items-center gap-2.5'>
-                <Image src={"/images/calendarIcon.png"} alt="image" width={30} height={30} className='w-[24px] h-[24px]' />
-                <span className='text-nase font-OpenSans'>{`Renews on April 1, 2024`}</span>
-             </div>
-             </div>
+                        <h5 className='text-[26px] md:text-[30px] lg:text-[35px] font-Dosis font-semibold'>{`Membership Management`}</h5>
+                        <div className='w-full bg-white/10 p-2.5 mt-[30px]'>
+                            <h6 className='text-[26px] md:text-[30px] lg:text-[35px] font-Dosis font-semibold'>{`Current Membership`}</h6>
+                            <div className='flex items-center gap-2.5 my-2.5'>
+                                <Image src={"/images/platinum.svg"} alt="image" width={30} height={30} className='w-[24px] h-[24px]' />
+                                <span className='text-nase font-OpenSans'>{`Platinum Plan`}</span>
+                            </div>
+                            <div className='flex items-center gap-2.5'>
+                                <Image src={"/images/calendarIcon.png"} alt="image" width={30} height={30} className='w-[24px] h-[24px]' />
+                                <span className='text-nase font-OpenSans'>{`Renews on April 1, 2024`}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

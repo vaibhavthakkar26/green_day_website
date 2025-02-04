@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const BlogDetail = () => {
   const blogdetailsData = blogdetails
-  const Categories=Categories
+  const Categories = Categories
   const Tag = Tag
   const socialIcon = socialIcon
 
@@ -17,11 +17,11 @@ const BlogDetail = () => {
     <div className='pt-[150px]'>
       <div className='container flex w-full justify-between gap-4'>
         <div className='w-full '>
-          <p className='text-white italic text-base font-OpenSans mb-4'>{Breadcrumb}</p>
-          <div className='aspect-[872/461] '>
+          {Breadcrumb && <p className='text-white italic text-base font-OpenSans mb-4'>{Breadcrumb}</p>}
+          {image && <div className='aspect-[872/461] '>
             <Image src={image} alt='image' width={500} height={500} className='w-full object-cover' />
-          </div>
-          <h2 className='text-[26px] md:text-[30px] lg:text-[35px] font-Dosis font-semibold mt-8 md:mt-[47px] mb-[30px]'>{title}</h2>
+          </div>}
+          {title && <h2 className='text-[26px] md:text-[30px] lg:text-[35px] font-Dosis font-semibold mt-8 md:mt-[47px] mb-[30px]'>{title}</h2>}
           <div dangerouslySetInnerHTML={{ __html: description1 }} className='SecondaryDescription font-OpenSans tracking-[0.65px] flex flex-col gap-5 md:gap-8 mb-5' />
           <div className='flex sm:flex-row flex-col w-full justify-between gap-4 mb-5'>
             <div dangerouslySetInnerHTML={{ __html: description2 }} className='SecondaryDescription !leading-[150%] font-OpenSans tracking-[0.65px] flex flex-col gap-5 md:gap-8 w-full max-w-full sm:max-w-[422px]' />
