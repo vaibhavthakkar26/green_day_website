@@ -15,7 +15,11 @@ const BlogCard = ({ blogCard }) => {
 
 
                             return (
-                                <div key={index}>
+
+                                <div key={index}
+                                    data-aos="fade-up"
+                                    data-aos-delay={index * 300} // 
+                                    data-aos-duration="1000">
                                     <div>
                                         <div className='border-[1px] w-full max-w-full md:max-w-[550px] lg:max-w-[628px] h-[380px] sm:h-[500px] md:h-[560px] lg:h-[628px] border-white relative pb-5 mb-6'>
                                             <Image

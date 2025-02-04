@@ -46,7 +46,7 @@ const ServiceDetails = ({ deatilsData, className }) => {
                                                 alignment === "left" ? " md:flex-row-reverse" : "md:flex-row"
                                             )}
                                         >
-                                            <div className="w-full max-w-[648px] flex flex-col items-start">
+                                            <div className="w-full max-w-[648px] flex flex-col items-start" data-aos="fade-right">
                                                 <h4 className="font-Dosis font-bold">{title}</h4>
 
                                                 {description ? (
@@ -69,7 +69,7 @@ const ServiceDetails = ({ deatilsData, className }) => {
                                             </div>
 
                                             {/* Media Section */}
-                                            <div className="w-full max-w-full md:max-w-[648px] flex flex-col gap-4 sm:gap-6">
+                                            <div className="w-full max-w-full md:max-w-[648px] flex flex-col gap-4 sm:gap-6" data-aos="fade-left">
                                                 {videos1.map((item, index) => (
                                                     <div key={index} className="w-full relative mb-6">
                                                         <video
