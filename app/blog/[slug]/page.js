@@ -1,37 +1,17 @@
 import Image from 'next/image'
-import { blogdetails } from '../../../lib/json/pagesData/blogPage/blogDetails/index'
+import { blogdetails, Categories, Tag } from '../../../lib/json/pagesData/blogPage/blogDetails/index'
 import React from 'react'
 import TopArrow from '../../components/commons/icons/topArrow/index'
 import Link from 'next/link'
 
-export const Categories = {
-  title: "Categories",
-  CategorieList: [
-    { list: "Massage Therapy" },
-    { list: "Mindfulness and Relaxation" },
-    { list: "Skincare Secrets" },
-    { list: "Wellness Tips" },
-  ]
-}
-export const Tag = {
-  title: "Tag",
-  tags: `#SpaTherapies, #RelaxationScience, #StressRelief, 
-#MassageBenefits, #AromatherapyHealing,
-#HydrotherapyWellness, #SelfCareTips,
-#MindBodyBalance, #WellnessJourney, #SpaForHealth`
-}
-export const socialIcon = {
-  title: "Social Share",
-  socialIcons: [
-    { image: "/images/facbookImage.png" },
-    { image: "/images/instagram.png" },
-    { image: "/images/youtube.png" },
-    { image: "/images/linkedin.png" },
-    { image: "/images/pinterest.png" },
-  ]
-}
+
 const BlogDetail = () => {
   const blogdetailsData = blogdetails
+  const Categories=Categories
+  const Tag = Tag
+  const socialIcon = socialIcon
+
+
   const { Breadcrumb, image, title, description1, description2, description3, postImage } = blogdetailsData || {}
   return (
     <div className='pt-[150px]'>
@@ -80,7 +60,6 @@ const BlogDetail = () => {
             <h6 className='PrimaryDescription !leading-[120%] font-Dosis mb-[20px]'>{`Your Journey to Bliss Begins Here`}</h6>
             <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
               <input placeholder={`Your E-mail ID`} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/50 bg-transparent outline-none block w-full' />
-              {/* <Image src={"/images/SearchIcon.svg"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' /> */}
               <TopArrow className="w-[24px] h-[24px]" />
             </div>
           </div>
