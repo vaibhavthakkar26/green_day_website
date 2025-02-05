@@ -9,7 +9,7 @@ const BlogCard = ({ blogCard }) => {
         <div className='py-[96px]'>
             <div className='container'>
                 {blogpost && (
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-y-[50px] gap-x-6'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-y-[50px] gap-x-6 overflow-hidden'>
                         {blogpost.map((item, index) => {
                             const { title, decription, button, varient, image, authorePublishData, link } = item || {}
 

@@ -1,15 +1,16 @@
 import Image from 'next/image'
-import { blogdetails, Categories, Tag } from '../../../lib/json/pagesData/blogPage/blogDetails/index'
+import { blogdetails, Categories, socialIcon, Tag } from '../../../lib/json/pagesData/blogPage/blogDetails/index'
 import React from 'react'
 import TopArrow from '../../components/commons/icons/topArrow/index'
 import Link from 'next/link'
 
 
+
 const BlogDetail = () => {
   const blogdetailsData = blogdetails
-  const Categories = Categories
-  const Tag = Tag
-  const socialIcon = socialIcon
+  const CategoriesData = Categories
+  const Tagdata = Tag
+  const socialIcondata = socialIcon
 
 
   const { Breadcrumb, image, title, description1, description2, description3, postImage } = blogdetailsData || {}
@@ -42,10 +43,10 @@ const BlogDetail = () => {
             </div>
           </div>
           <div className='mt-[50px]'>
-            <h5 className='PrimarySubtitle font-semibold font-Dosis mb-[20px]'>{Categories.title}</h5>
-            {Categories.CategorieList &&
+            <h5 className='PrimarySubtitle font-semibold font-Dosis mb-[20px]'>{CategoriesData.title}</h5>
+            {CategoriesData.CategorieList &&
               <div className='flex flex-col gap-3'>
-                {Categories.CategorieList.map((item, index) => {
+                {CategoriesData.CategorieList.map((item, index) => {
                   return (
                     <div key={index}>
                       <span className='SecondaryDescription font-OpenSans tracking-[0.65px]'>{item.list}</span>
@@ -63,13 +64,13 @@ const BlogDetail = () => {
               <TopArrow className="w-[24px] h-[24px]" />
             </div>
           </div>
-          <h5 className='PrimarySubtitle font-semibold font-Dosis mb-[20px]'>{Tag.title}</h5>
-          <span className='SecondaryDescription font-OpenSans tracking-[0.65px] italic'>{Tag.tags}</span>
+          <h5 className='PrimarySubtitle font-semibold font-Dosis mb-[20px]'>{Tagdata.title}</h5>
+          <span className='SecondaryDescription font-OpenSans tracking-[0.65px] italic'>{Tagdata.tags}</span>
           <div className='mt-[50px]'>
-            <h5 className='PrimarySubtitle font-semibold font-Dosis mb-[20px]'>{socialIcon.title}</h5>
-            {socialIcon.socialIcons &&
+            <h5 className='PrimarySubtitle font-semibold font-Dosis mb-[20px]'>{socialIcondata.title}</h5>
+            {socialIcondata.socialIcons &&
               <div className='flex gap-5'>
-                {socialIcon.socialIcons.map((item, index) => {
+                {socialIcondata.socialIcons.map((item, index) => {
                   return (
                     <div key={index}>
                       <Link href={"#"} >

@@ -114,7 +114,7 @@ const PriceRateSection = ({ PriceRateSectiondata }) => {
 
   return (
     <div
-      className={clsx("overflow-hidden", image ? "py-[228px] relative z-10" : "")}
+      className={clsx("overflow-hidden", image ? "py-[228px] px-5 sm:px-12 relative z-10" : "")}
       style={{
         backgroundImage: `url(${image})`,
         backgroundPosition: "center",
@@ -135,16 +135,17 @@ const PriceRateSection = ({ PriceRateSectiondata }) => {
           loop={true}
           swiperWrapperClass="!overflow-visible"
           breakpoints={{
-            640: { slidesPerView: 2, spaceBetween: 20 },
-            768: { slidesPerView: 3, spaceBetween: 20 },
-            1024: { slidesPerView: 4, spaceBetween: 20 },
-            1280: { slidesPerView: 5, spaceBetween: 24 },
+            640: { slidesPerView: 2, spaceBetween: 10 },
+            768: { slidesPerView: 2, spaceBetween: 10 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+            1280: { slidesPerView: 4, spaceBetween: 24 },
+            1440: { slidesPerView: 5, spaceBetween: 24 },
           }}
           renderSlide={(item, index) => {
             const { price, description, author, color, button, variant } = item || {};
             return (
-              <div key={index} className="border-[1px] border-white relative w-full h-[450px] md:h-[517px] pl-2.5">
-                <div className="bg-black/50 p-5 absolute top-2 -right-3 left-2 flex flex-col items-center w-full max-w-full md:max-w-[312px]">
+              <div key={index} className="border-[1px] border-white relative w-full h-[450px] xl:h-[517px] pl-2.5">
+                <div className="bg-black/50 p-3 1xl:p-5 absolute top-2 -right-3 left-2 flex flex-col items-center w-full max-w-full md:max-w-[312px]">
                   <h5 className="text-[34px] font-semibold font-Dosis text-center">{price}</h5>
                   <span className="PrimarySubtitle font-Dosis font-semibold mt-[15px]">{color}</span>
                   {description && (

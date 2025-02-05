@@ -177,7 +177,7 @@ const Carousel = ({
             {dots && (
                 <div className="relative flex justify-center items-center mt-6">
               {dotVariant === "priceRate" ? (
-      <div className="relative w-full max-w-auto flex items-center gap-4 mt-10">
+      <div className="relative w-full max-w-auto flex items-center gap-4 mt-14">
       {/* Background Line */}
       <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white/50 transform -translate-y-1/2"></div>
 

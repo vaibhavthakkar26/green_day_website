@@ -55,7 +55,7 @@ const Profile = () => {
           </div>
         </div>
 
-        <div className='container flex flex-col lg:flex-row gap-6 pt-[101px]'>
+        <div className='container flex flex-col lg:flex-row justify-between gap-6 pt-[101px]'>
           <div>
             <div className="block lg:hidden relative">
               <button
@@ -106,7 +106,7 @@ const Profile = () => {
               </div>
             )}
           </div>
-          <div className='w-full max-w-[872px]'>
+          <div className='w-full max-w-[750px] xl:max-w-[872px]'>
             <div className='flex em:flex-row flex-col em:items-center justify-between gap-4 w-full'>
               <h5 className='text-[26px] md:text-[30px] lg:text-[35px] font-Dosis font-semibold'>{`Active Services`}</h5>
               <div className='pr-5 bg-white/10  border-[1px] border-white'>
