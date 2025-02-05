@@ -13,23 +13,23 @@ const ServiceManagement = () => {
     {
       label1: "Full Name",
       placeholder: "Jhon Deo",
-      image: "/images/profile.svg"
+      image: "/profile.svg"
     },
     {
       label1: "Date of Birth",
       placeholder: "DD/MM/YYYY",
-      image: "/images/mobileIcon.svg",
+      image: "/mobileIcon.svg",
       label2: "Gender"
     },
     {
       label1: "Phone Number",
       placeholder: "+1 (555) 123-4567",
-      image: "/images/mobileIcon.svg"
+      image: "/mobileIcon.svg"
     },
     {
       label1: "Email ID",
       placeholder: "john.doe@example.com",
-      image: "/images/emailIcon.svg"
+      image: "/emailIcon.svg"
     }
   ]
   const button = [
@@ -40,9 +40,9 @@ const ServiceManagement = () => {
   return (
     <div>
       <div className='relative'>
-        <Image src={"/images/serviceBgImage.png"} alt='image' width={1920} height={500} className='w-full object-cover h-[300px]' />
+        <Image src={"/serviceBgImage.png"} alt='image' width={1920} height={500} className='w-full object-cover h-[300px]' />
         <div className="flex items-center absolute bottom-6 left-[20px] 1xl:left-[150px] 3xl:left-[300px] gap-[15px]">
-          <Image src={"/images/menPrfile.png"} alt='image' width={200} height={200} className='w-full max-w-[100px] object-cover h-[100px] rounded-full' />
+          <Image src={"/menPrfile.png"} alt='image' width={200} height={200} className='w-full max-w-[100px] object-cover h-[100px] rounded-full' />
           <div>
             <h5 className='PrimarySubtitle font-Dosis font-semibold mb-4'>{`Jhon Deo`}</h5>
             <span className="px-2.5 py-2.5 font-semibold text-black rounded-lg bg-gradient-to-r from-white via-gray-400 to-white border border-gray-500 shadow-md text-base font-OpenSans leading-[100%]">

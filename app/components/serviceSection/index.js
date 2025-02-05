@@ -146,7 +146,7 @@ const ServiceSection = () => {
                             </label>
                             <div className='bg-white/10 border-[1px] border-[#A9A9A9] flex items-center justify-between gap-3 p-2.5'>
                                 <input placeholder={`₹ 599.00`} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
-                                <Image src={"/images/moneyIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
+                                <Image src={"/moneyIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                             </div>
                         </div>
                         <div className='w-full'>
@@ -155,7 +155,7 @@ const ServiceSection = () => {
                             </label>
                             <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
                                 <input placeholder={`DD/MM/YYYY, 00:00`} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
-                                <Image src={"/images/calendarIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
+                                <Image src={"/calendarIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                             </div>
                         </div>
                     </div>

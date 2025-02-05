@@ -44,17 +44,17 @@ const AppointmentFrom = () => {
         {
             label: "Full Name",
             placeholder: "Jhon Deo",
-            image: "/images/profile.svg"
+            image: "/profile.svg"
         },
         {
             label: "Phone Number",
             placeholder: "+91 99999 88888",
-            image: "/images/mobileIcon.svg"
+            image: "/mobileIcon.svg"
         },
         {
             label: "Email ID",
             placeholder: "example@email.com",
-            image: "/images/emailIcon.svg"
+            image: "/emailIcon.svg"
         }
     ]
     return (
@@ -157,7 +157,7 @@ const AppointmentFrom = () => {
                             </label>
                             <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
                                 <input placeholder={`DD/MM/YYYY,`} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
-                                <Image src={"/images/calendarIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
+                                <Image src={"/calendarIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                             </div>
                         </div>
                         <div className='w-full max-w-[200px]'>
@@ -166,7 +166,7 @@ const AppointmentFrom = () => {
                             </label>
                             <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
                                 <input placeholder={`08:00 am`} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
-                                <Image src={"/images/clock.svg"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
+                                <Image src={"/clock.svg"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                             </div>
                         </div>
                     </div>

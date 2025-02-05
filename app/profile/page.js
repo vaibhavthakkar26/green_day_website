@@ -17,21 +17,21 @@ const Profile = () => {
   ]
   const Meassages = [
     {
-      image: "/images/active.svg",
+      image: "/active.svg",
       label: "Active",
       title: "Thai Massage",
       date: "26-12-2024",
       time: "14:00"
     },
     {
-      image: "/images/pending.svg",
+      image: "/pending.svg",
       label: "Pending",
       title: "Aromatherapy",
       date: "26-12-2024",
       time: "14:00"
     },
     {
-      image: "/images/cancle.svg",
+      image: "/cancle.svg",
       label: "Cancel",
       title: "Deep Tissue",
       date: "26-12-2024",
@@ -42,9 +42,9 @@ const Profile = () => {
     <div>
       <div>
         <div className='relative'>
-          <Image src={"/images/serviceBgImage.png"} alt='image' width={1920} height={500} className='w-full object-cover h-[300px]' />
+          <Image src={"/serviceBgImage.png"} alt='image' width={1920} height={500} className='w-full object-cover h-[300px]' />
           <div className="flex items-center absolute bottom-6 left-[20px] 1xl:left-[150px] 3xl:left-[300px] gap-[15px]">
-            <Image src={"/images/menPrfile.png"} alt='image' width={200} height={200} className='w-full max-w-[100px] object-cover h-[100px] rounded-full' />
+            <Image src={"/menPrfile.png"} alt='image' width={200} height={200} className='w-full max-w-[100px] object-cover h-[100px] rounded-full' />
 
             <div>
               <h5 className='PrimarySubtitle font-Dosis font-semibold mb-4'>{`Jhon Deo`}</h5>
@@ -136,11 +136,11 @@ const Profile = () => {
                           <h5 className=' text-lg md:text-xl font-semibold font-OpenSans my-[13px]'>{item.title}</h5>
                           <div className='flex items-center gap-5'>
                             <div className='flex items-center gap-2.5'>
-                              <Image src={"/images/calendarIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
+                              <Image src={"/calendarIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                               <span className='text-base font-OpenSans'>{item.date}</span>
                             </div>
                             <div className='flex items-center gap-2.5'>
-                              <Image src={"/images/calendarIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
+                              <Image src={"/calendarIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                               <span className='text-base font-OpenSans'>{item.time}</span>
                             </div>
                           </div>

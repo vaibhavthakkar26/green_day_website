@@ -190,7 +190,7 @@ const Carousel = ({
           }}
       >
           <Image
-              src="/images/sliderDots.png"
+              src="/sliderDots.png"
               alt="Slider Dots"
               width={200} 
               height={10} 
@@ -251,65 +251,3 @@ const Carousel = ({
 };
 
 export default Carousel;
-
-
-
-// {dotVariant === "priceRate" ? (
-//     <div className="relative w-full max-w-[1250px] flex items-center gap-4 mt-10">
-//         {/* Background Line */}
-//         <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white/50 transform -translate-y-1/2"></div>
-
-//         {/* Progress Bar */}
-//         <div
-//             className="absolute top-1/2 left-0 h-[2px] transition-all duration-500"
-         
-       
-//         >
-//                  <Image  src={"/images/sliderDots.png"} alt="image" width={200} height={10}    style={{
-//                 width: `${((selectedIndex + 1) / safeData.length) * 100}%`,
-//                 transform: "translateY(-50%)",
-//             }} />
-//         </div>
-
-//         {/* Left Arrow */}
-//         <button
-//             className="absolute left-0 -translate-x-12 "
-//             onClick={handlePrev}
-//         >
-          
-//           <RightArrow />
-//         </button>
-
-//         {/* Right Arrow */}
-//         <button
-//             className="absolute right-0 translate-x-12"
-//             onClick={handleNext}
-//         >
-//              <LeftArrow />
-//         </button>
-//     </div>
-// ) : (
-//     <div className="flex gap-3">
-//         {safeData.map((_, i) => (
-//             <button
-//                 key={i}
-//                 className={clsx(
-//                     "flex items-center",
-//                     selectedIndex === i &&
-//                     "border-[2px] border-white rounded-full w-[24px] h-[24px] flex items-center justify-center"
-//                 )}
-//                 onClick={() => goToSlide(i)}
-//                 aria-label={`Go to slide ${i + 1}`}
-//             >
-//                 <div
-//                     className={clsx(
-//                         "w-[14px] h-[14px] border-[2px] rounded-full",
-//                         selectedIndex === i
-//                             ? "bg-white border-transparent"
-//                             : "bg-[#272727] border-transparent"
-//                     )}
-//                 />
-//             </button>
-//         ))}
-//     </div>
-// )}

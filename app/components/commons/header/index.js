@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import logo from '../../../../public/Images/logo.png';
+import logo from '../../../../public/logo.png';
 import ToggelIcon from '../icons/toggelicon';
 import clsx from 'clsx';
 import { headerData } from '../../../../lib/json/layoutData/index';

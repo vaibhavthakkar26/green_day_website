@@ -14,21 +14,21 @@ const MembershipManagement = () => {
     ]
     const Meassages = [
         {
-            image: "/images/active.svg",
+            image: "/active.svg",
             label: "Active",
             title: "Thai Massage",
             date: "26-12-2024",
             time: "14:00"
         },
         {
-            image: "/images/pending.svg",
+            image: "/pending.svg",
             label: "Pending",
             title: "Aromatherapy",
             date: "26-12-2024",
             time: "14:00"
         },
         {
-            image: "/images/cancle.svg",
+            image: "/cancle.svg",
             label: "Cancel",
             title: "Deep Tissue",
             date: "26-12-2024",
@@ -39,9 +39,9 @@ const MembershipManagement = () => {
         <div>
             <div>
                 <div className='relative'>
-                    <Image src={"/images/serviceBgImage.png"} alt='image' width={1920} height={500} className='w-full object-cover h-[300px]' />
+                    <Image src={"/serviceBgImage.png"} alt='image' width={1920} height={500} className='w-full object-cover h-[300px]' />
                     <div className="flex items-center absolute bottom-6 left-[20px] 1xl:left-[150px] 3xl:left-[300px] gap-[15px]">
-                        <Image src={"/images/menPrfile.png"} alt='image' width={200} height={200} className='w-full max-w-[100px] object-cover h-[100px] rounded-full' />
+                        <Image src={"/menPrfile.png"} alt='image' width={200} height={200} className='w-full max-w-[100px] object-cover h-[100px] rounded-full' />
 
                         <div>
                             <h5 className='PrimarySubtitle font-Dosis font-semibold mb-4'>{`Jhon Deo`}</h5>
@@ -108,11 +108,11 @@ const MembershipManagement = () => {
                         <div className='w-full bg-white/10 p-2.5 mt-[30px]'>
                             <h6 className='text-[26px] md:text-[30px] lg:text-[35px] font-Dosis font-semibold'>{`Current Membership`}</h6>
                             <div className='flex items-center gap-2.5 my-2.5'>
-                                <Image src={"/images/platinum.svg"} alt="image" width={30} height={30} className='w-[24px] h-[24px]' />
+                                <Image src={"/platinum.svg"} alt="image" width={30} height={30} className='w-[24px] h-[24px]' />
                                 <span className='text-nase font-OpenSans'>{`Platinum Plan`}</span>
                             </div>
                             <div className='flex items-center gap-2.5'>
-                                <Image src={"/images/calendarIcon.png"} alt="image" width={30} height={30} className='w-[24px] h-[24px]' />
+                                <Image src={"/calendarIcon.png"} alt="image" width={30} height={30} className='w-[24px] h-[24px]' />
                                 <span className='text-nase font-OpenSans'>{`Renews on April 1, 2024`}</span>
                             </div>
                         </div>
