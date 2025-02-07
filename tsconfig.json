@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "lib/hooks/useAOS/index.js"  ],
   "exclude": [
     "node_modules"
   ]

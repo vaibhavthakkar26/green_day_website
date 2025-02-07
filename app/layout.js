@@ -5,9 +5,8 @@ import "./globals.css";
 import "aos/dist/aos.css";
 import Lenis from "lenis";
 import { useEffect } from "react";
-import Header from "./components/commons/header";
-import Footer from "./components/commons/footer";
-import useAOS from "../lib/hooks/useAOS/index";
+import Header from "./(main)/components/commons/header";
+import useAOS from "../lib/hooks/useAOS";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export default function RootLayout({ children, pageProps }) {
+  // Initialize smooth scroll (Lenis)
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2, // adjust as needed
@@ -39,6 +39,7 @@ export default function RootLayout({ children, pageProps }) {
   }, []);
 
   useAOS(pageProps?.page?._id);
+
   return (
     <html lang="en">
       <body
@@ -46,7 +47,6 @@ export default function RootLayout({ children, pageProps }) {
       >
         <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );
