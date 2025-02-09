@@ -20,15 +20,15 @@ body {
   }
 
   h1 {
-    @apply text-[48px] md:text-[56px] lg:text-[75px] leading-[130%];
+    @apply text-[44px]  em:text-[48px] md:text-[56px] lg:text-[75px] leading-[130%];
   }
 
   h2 {
-    @apply text-[48px] md:text-[56px] lg:text-[75px] leading-[130%];
+    @apply text-[44px]  em:text-[48px] md:text-[56px] lg:text-[75px] leading-[130%];
   }
 
   h3 {
-    @apply text-[44px] md:text-[52px] lg:text-[64px] leading-[140%];
+    @apply text-[40px] em:text-[44px] md:text-[52px] lg:text-[64px] leading-[140%];
   }
 
   h4 {

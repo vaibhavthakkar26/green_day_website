@@ -70,7 +70,7 @@ const AppointmentFrom = () => {
                                 {`Category`}
                             </label>
                             <div
-                                className="bg-white/10 border-b-[1px] border-[#A9A9A9] flex items-center justify-between p-3 cursor-pointer"
+                                className="bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-[#A9A9A9] flex items-center justify-between p-3 cursor-pointer"
                                 onClick={() => setIsBranchOpen(!isBranchOpen)}
                             >
                                 <span className="text-[#A9A9A9]">{selectedBranch}</span>
@@ -155,7 +155,7 @@ const AppointmentFrom = () => {
                             <label className='text-base font-OpenSans font-semibold mb-2.5 block'>
                                 {`Date`}
                             </label>
-                            <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+                            <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
                                 <input placeholder={`DD/MM/YYYY,`} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
                                 <Image src={"/calendarIcon.png"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                             </div>
@@ -164,7 +164,7 @@ const AppointmentFrom = () => {
                             <label className='text-base font-OpenSans font-semibold mb-2.5 block'>
                                 {`Time Slot`}
                             </label>
-                            <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+                            <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
                                 <input placeholder={`08:00 am`} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
                                 <Image src={"/clock.svg"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                             </div>
@@ -182,7 +182,7 @@ const AppointmentFrom = () => {
                                     <label className='text-base font-OpenSans font-semibold mb-2.5 block'>
                                         {label}
                                     </label>
-                                    <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+                                    <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
                                         <input placeholder={placeholder} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/50 bg-transparent outline-none block w-full' />
                                         <Image src={image} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
                                     </div>
@@ -194,7 +194,7 @@ const AppointmentFrom = () => {
                         <label className='text-base font-OpenSans font-semibold mb-2.5'>
                             {`Note`}
                         </label>
-                        <textarea rows={6} placeholder='Description' className='placeholder:text-base placeholder:font-OpenSans placeholder:text-white/50 bg-white/10 outline-none border-b-[1px] border-white resize-none px-2.5 py-2.5' />
+                        <textarea rows={6} placeholder='Description' className='placeholder:text-base placeholder:font-OpenSans placeholder:text-white/50 bg-white/10 outline-none border-b-[1px] focus-within:border-[1px] basic-transition border-white resize-none px-2.5 py-2.5' />
                     </div>
                     <Button label={`Book Appointment`} variant={"grayButton"} href={"#"} className="!py-[27px] w-full em:w-fit" />
                 </div>

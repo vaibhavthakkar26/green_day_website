@@ -15,7 +15,7 @@ const LoginOtp = () => {
             <label className='text-base font-OpenSans font-semibold mb-2.5 block'>
               {`Mobile Number`}
             </label>
-            <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+            <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
               <input placeholder={`+91 00000 00000`} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
               <Image src={"/mobileIcon.svg"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
             </div>
@@ -23,19 +23,19 @@ const LoginOtp = () => {
               {`OTP`}
             </label>
             <div className='grid grid-cols-6 gap-2.5'>
-              <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+              <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
                 <input placeholder={`0`} className=' placeholder:text-base placeholder:text-center placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
               </div>
-              <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+              <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
                 <input placeholder={`0`} className=' placeholder:text-base placeholder:text-center placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
               </div>
-              <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+              <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
                 <input placeholder={`0`} className=' placeholder:text-base placeholder:text-center placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
               </div>
-              <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+              <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
                 <input placeholder={`0`} className=' placeholder:text-base placeholder:text-center placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
               </div>
-              <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+              <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
                 <input placeholder={`0`} className=' placeholder:text-base placeholder:text-center placeholder:font-OpenSans placeholder:text-white/10 bg-transparent outline-none block w-full' />
               </div>
               <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
@@ -53,7 +53,7 @@ const LoginOtp = () => {
           </div>
         </div>
       </div>
-      <Image src={"/loginBgImage.svg"} alt="image" width={1920} height={1060} className='absolute inset-0 h-[850px] lg:h-[900px] xl:h-[950px] md:block hidden' />
+      <Image src={"/loginBgImage.svg"} alt="image" width={1920} height={1060} className='absolute inset-0 h-[850px] lg:h-[900px] xl:h-[950px] md:block hidden -z-10' />
     </div>
   )
 }

@@ -20,7 +20,7 @@ const AboutUs = () => {
     <div>
       <InnerBanner BannerData={AboutBannrData} />
       <ServiceDetails deatilsData={serviceDetailsdata} className=" [&>div>:nth-child(1)]:!pb-0" />
-      <MeassageSection meassageSectionData={meassageSectionData} />
+      <MeassageSection meassageSectionData={meassageSectionData} animate={true} />
       <VidoeSection videoData={videoData} />
       <TestimonialSection TestimonialData={TestimonialData} />
       <NewsLatter newsLatterData={newsLatterData} />

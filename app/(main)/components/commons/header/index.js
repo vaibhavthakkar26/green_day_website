@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import ToggelIcon from '../icons/toggelicon';
 import clsx from 'clsx';
@@ -9,17 +9,21 @@ import Link from 'next/link';
 import ToggleCloseIcon from '../icons/toggelCloseIcon';
 
 const Header = () => {
-    const [toggle, setToggel] = useState(false);
+    const [toggle, setToggle] = useState(false);
 
-    const handelClick = () => {
-        setToggel(true);
-        document.body.style.overflow = 'hidden';
-    };
+    useEffect(() => {
+        if (toggle) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+        return () => {
+            document.body.style.overflow = "auto"; 
+        };
+    }, [toggle]);
 
-    const handelClose = () => {
-        setToggel(false);
-        document.body.style.overflow = 'auto';
-    };
+    const handleClick = () => setToggle(true);
+    const handleClose = () => setToggle(false);
 
 
     const navitemData = headerData?.navItem || [];
@@ -30,10 +34,10 @@ const Header = () => {
         <div>
             <div className=' container relative z-50'>
                 <div className='flex items-center justify-between pt-[30px] fixed right-0 left-0 w-full max-w-[1320px] mx-auto px-5'>
-              <Link href={"/"}>
-              <Image src={"/logo.png"} alt="logo" width={100} height={100} className='w-full max-w-[80px] sm:max-w-[110px] h-[50px] sm:h-[70px] object-cover' />
-              </Link>
-                    <div onClick={handelClick} className='cursor-pointer'>
+                    <Link href={"/"}>
+                        <Image src={"/logo.png"} alt="logo" width={100} height={100} className='w-full max-w-[80px] sm:max-w-[110px] h-[50px] sm:h-[70px] object-cover' />
+                    </Link>
+                    <div onClick={handleClick} className='cursor-pointer'>
                         <ToggelIcon className='w-[34px] h-[18px]' />
                     </div>
 
@@ -41,17 +45,17 @@ const Header = () => {
                         <div className='container relative'>
                             <div className='flex items-center justify-between'>
                                 <Image src={"/logo.png"} alt="logo" width={100} height={100} className='w-full max-w-[80px] sm:max-w-[110px] h-[50px] sm:h-[69px] object-cover' />
-                                <div onClick={handelClose} className='cursor-pointer'>
+                                <div onClick={handleClose} className='cursor-pointer'>
                                     <ToggleCloseIcon className='w-[28px] h-[28px]' />
                                 </div>
                             </div>
 
                             <div className='flex em:flex-row flex-col  items-start em:items-center justify-between gap-x-4 gap-y-12 w-full max-w-[850px]'>
-                
+
                                 <div className='flex flex-col gap-6 pt-[50px] md:pt-[89px]'>
                                     {navitemData.map((item, index) => (
                                         <h4 key={index}>
-                                            <Link href={item.link} onClick={handelClose} className='text-white hover:text-white/70 font-Dosis font-semibold basic-transition '>
+                                            <Link href={item.link} onClick={handleClose} className='text-white hover:text-white/70 font-Dosis font-semibold basic-transition '>
                                                 {item.item}
                                             </Link>
                                         </h4>

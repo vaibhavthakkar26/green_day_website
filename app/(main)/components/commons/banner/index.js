@@ -1,11 +1,11 @@
 import React from 'react';
-import Button from '../button';
-
+import Button from '../button/index';
+import {  SwiperSlide } from "swiper/react";
 
 
 const Banner = ({ bannerData }) => {
     return (
-        <div className=''>
+        <SwiperSlide className=''>
             {bannerData && bannerData.map((item, index) => {
                 const { title, description, Titletag, button, image, link, variant } = item;
                 const TitleTagComponent = Titletag || 'h2';
@@ -26,7 +26,7 @@ const Banner = ({ bannerData }) => {
                     </div>
                 );
             })}
-        </div>
+        </SwiperSlide>
     );
 };
 

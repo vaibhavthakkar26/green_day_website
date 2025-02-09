@@ -143,7 +143,7 @@ const ServiceManagement = () => {
                       {label1}
                     </label>
 
-                    <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
+                    <div className='bg-white/10 border-b-[1px] focus-within:border-[1px] basic-transition border-white flex items-center justify-between gap-3 p-2.5'>
                       <input
                         placeholder={placeholder}
                         className='placeholder:text-base placeholder:font-OpenSans placeholder:text-white/50 bg-transparent outline-none block w-full'
@@ -166,7 +166,7 @@ const ServiceManagement = () => {
             label={`Log Out`}
             variant={"grayButton"}
             href={"#"}
-            className="!py-[27px] w-full !bg-[#EF4444]/[10%] border-[#EF4444] text-[#EF4444] mt-[45px] md:mt-[65px] lg:mt-[100px]"
+            className="!py-[27px] w-full !bg-[#EF4444]/[10%] !border-[#EF4444] text-[#EF4444] mt-[45px] md:mt-[65px] lg:mt-[100px]"
           />
         </div>
       </div>
