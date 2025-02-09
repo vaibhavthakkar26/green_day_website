@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import PlayIcon from "../commons/icons/playIcon";
 import Button from "../commons/button";
 
+
 const ServiceDetails = ({ deatilsData, className }) => {
 
     const [videoControls, setVideoControls] = useState({});

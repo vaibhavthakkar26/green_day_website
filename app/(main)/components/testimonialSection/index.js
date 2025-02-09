@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 function TestimonialSection({ TestimonialData, animate }) {
 
     const { TestimonialSectiondata, image, slider } = TestimonialData || {}
-    console.log(animate, "ssss")
+
     return (
         <div className={clsx("relative z-10", image ? " py-32  min-h-screen flex items-center justify-center" : "pb-[60px] md:pb-[80px] lg:pb-[100px]")} style={{ backgroundImage: `url(${image})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundAttachment: "fixed" }}>
             {image && <div className='bg-black/30 px-8 w-full absolute inset-0 -z-10'></div>}
