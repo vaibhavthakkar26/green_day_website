@@ -38,22 +38,20 @@ const Footer = ({ animate }) => {
   const { ContactUs, copyright, description, label, openTime, socialIcon, title, subtitle } = footerdata || {};
 
   const backgroundIamge = {
-    "/": "/homeFooterBg.png",
-    "/service": "/serviceFooterBg.png",
-    "/our-branch": "/ourBranchFooterBg.png"
+    "/": "/images/homeFooterBg.webp",
+    "/service": "/images/serviceFooterBg.webp",
+    "/our-branch": "/images/ourBranchFooterBg.webp"
   };
   const isImageBackgroundPage = Object.keys(backgroundIamge).includes(currentPath);
 
-  const backgroundStyle = isImageBackgroundPage
-    ? { backgroundImage: `url(${backgroundIamge[currentPath]})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: "fixed" }
-    : { backgroundColor: '#0F0F0F' };
 
   const characters = label.split('');
   const angleStep = 360 / characters.length;
-
   return (
-    <div style={backgroundStyle} className="relative">
+    <div  className="relative">
+      { backgroundIamge[currentPath] &&   <Image src={backgroundIamge[currentPath]} alt='' width={1920} height={1100} loading='eager' className='object-cover absolute inset-0 w-full min-h-screen -z-10 ' />}
       <div className={clsx('overflow-hidden', isImageBackgroundPage ? "bg-black/30 pb-8 pt-28 em:pt-32 min-h-screen flex items-center justify-center" : "py-[100px]")}>
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={animate ? { opacity: 1, y: 0 } : { opacity: 1, y: 100 }}

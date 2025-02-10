@@ -18,7 +18,7 @@ const Header = () => {
             document.body.style.overflow = "auto";
         }
         return () => {
-            document.body.style.overflow = "auto"; 
+            document.body.style.overflow = "auto";
         };
     }, [toggle]);
 
@@ -35,16 +35,16 @@ const Header = () => {
             <div className=' container relative z-50'>
                 <div className='flex items-center justify-between pt-[30px] fixed right-0 left-0 w-full max-w-[1320px] mx-auto px-5'>
                     <Link href={"/"}>
-                        <Image src={"/logo.png"} alt="logo" width={100} height={100} className='w-full max-w-[80px] sm:max-w-[110px] h-[50px] sm:h-[70px] object-cover' />
+                        <Image src={"/images/logo.webp"} alt="logo" width={100} height={100} className='w-full max-w-[80px] sm:max-w-[110px] h-[50px] sm:h-[70px] object-cover' />
                     </Link>
                     <div onClick={handleClick} className='cursor-pointer'>
                         <ToggelIcon className='w-[34px] h-[18px]' />
                     </div>
 
-                    <div className={clsx('fixed inset-0 w-full h-screen bg-lightBlack transition-all duration-500 ease-linear pt-[30px] overflow-y-auto pb-20 z-50', toggle ? "translate-x-0 opacity-100" : "translate-x-[100%] opacity-0")}>
+                    <div className={clsx('fixed inset-0 w-full h-screen bg-lightBlack transition-all duration-500 ease-linear pt-6 em:pt-[30px] pb-8 em:pb-4 overflow-y-auto  z-50', toggle ? "translate-x-0 opacity-100" : "translate-x-[100%] opacity-0")}>
                         <div className='container relative'>
                             <div className='flex items-center justify-between'>
-                                <Image src={"/logo.png"} alt="logo" width={100} height={100} className='w-full max-w-[80px] sm:max-w-[110px] h-[50px] sm:h-[69px] object-cover' />
+                                <Image src={"/images/logo.webp"} alt="logo" width={100} height={100} className='w-full max-w-[80px] sm:max-w-[110px] h-[50px] sm:h-[69px] object-cover' />
                                 <div onClick={handleClose} className='cursor-pointer'>
                                     <ToggleCloseIcon className='w-[28px] h-[28px]' />
                                 </div>
@@ -52,7 +52,7 @@ const Header = () => {
 
                             <div className='flex em:flex-row flex-col  items-start em:items-center justify-between gap-x-4 gap-y-12 w-full max-w-[850px]'>
 
-                                <div className='flex flex-col gap-6 pt-[50px] md:pt-[89px]'>
+                                <div className='flex flex-col gap-4 em:gap-6 pt-[25px] em:pt-[50px] md:pt-[89px]'>
                                     {navitemData.map((item, index) => (
                                         <h4 key={index}>
                                             <Link href={item.link} onClick={handleClose} className='text-white hover:text-white/70 font-Dosis font-semibold basic-transition '>
@@ -64,7 +64,7 @@ const Header = () => {
 
                                 <div>
                                     <div>
-                                        <h5 className='text-white mb-[30px] font-Dosis font-medium'>{conatctUsDetails.title}</h5>
+                                        <h5 className='text-white mb-[20px] em:mb-[30px] font-Dosis font-medium'>{conatctUsDetails.title}</h5>
                                         <div className='flex flex-col gap-[15px]'>
                                             {
                                                 conatctUsDetails.contactusData && conatctUsDetails.contactusData.map((item, index) => {
@@ -83,7 +83,7 @@ const Header = () => {
                                             }
                                         </div>
                                     </div>
-                                    <div className='mt-[40px] em:mt-[60px] md:mt-[87px]'>
+                                    <div className='mt-[30px] em:mt-[60px] md:mt-[87px]'>
                                         <h5 className='text-white mb-[30px] font-Dosis font-medium'>{openTimeDetails.title}</h5>
                                         <div>
                                             <p className='SecondaryDescription text-white font-OpenSans mb-4'>{openTimeDetails.subtitle}</p>
@@ -105,7 +105,7 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className=' absolute right-0 1xl:right-[-2%] 3xl:right-[-8%] bottom-[-60px] -z-10'>
+                                <div className=' absolute right-0 1xl:right-[-2%] 3xl:right-[-8%] bottom-0 -z-10'>
                                     <Image src={headerData.image} alt="logo" width={600} height={700} className='w-full max-w-[558px] h-[550px]' />
                                 </div>
                             </div>

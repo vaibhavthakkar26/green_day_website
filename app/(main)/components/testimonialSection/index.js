@@ -5,14 +5,18 @@ import Carousel from "../commons/carousel";
 import Quote from "../commons/icons/quote";
 import clsx from "clsx";
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 function TestimonialSection({ TestimonialData, animate }) {
 
     const { TestimonialSectiondata, image, slider } = TestimonialData || {}
-
     return (
-        <div className={clsx("relative z-10", image ? " py-32  min-h-screen flex items-center justify-center" : "pb-[60px] md:pb-[80px] lg:pb-[100px]")} style={{ backgroundImage: `url(${image})`, backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundAttachment: "fixed" }}>
-            {image && <div className='bg-black/30 px-8 w-full absolute inset-0 -z-10'></div>}
+        <div className={clsx("relative z-10", image ? " py-32  min-h-screen flex items-center justify-center" : "pb-[60px] md:pb-[80px] lg:pb-[100px]")}>
+
+            <div>
+                <Image src={image} alt='' width={1920} height={1100} loading='eager' className='object-cover absolute inset-0 w-full min-h-screen -z-10 ' />
+                {image && <div className='bg-black/30 px-8 w-full absolute inset-0 -z-10'></div>}
+            </div>
             <div className="container">
                 {slider === true ? <Carousel
                     slidesPerView={1}

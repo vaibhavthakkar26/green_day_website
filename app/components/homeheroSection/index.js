@@ -7,22 +7,22 @@ import { motion } from "framer-motion";
 
 const HomeHeroSection = ({ bannerData, animate }) => {
     return (
-        <div>
-            <div className=''>
+        <div className='h-full'>
+      
                 {bannerData && bannerData.map((item, index) => {
                     const { title, description, Titletag, button, link, variant, mediaType } = item;
                     const TitleTagComponent = Titletag || 'h2';
 
                     return (
-                        <div key={index} className='flex flex-col items-center justify-center w-full relative z-10'>
-                            <div className='bg-black/30   w-full max-w-[1920px] absolute inset-0 -z-10'>
+                        <div key={index} className=' w-full relative z-10 h-full'>
+                            <div className='bg-black/30   w-full max-w-[1920px] h-screen absolute inset-0 -z-10'>
                             </div>
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={animate ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                                className='w-full max-w-[1250px] py-32 px-4 sm:px-8 min-h-screen  mx-auto flex flex-col items-center justify-center'>
+                                className='w-full max-w-[1250px] py-32 px-4 sm:px-8     mx-auto flex flex-col items-center justify-center h-full'>
                                 {title && <TitleTagComponent className='text-center font-bold font-Dosis text-white'>{title}</TitleTagComponent>}
                                 {description && <p className='text-white text-center font-OpenSans SecondaryDescription pt-[30px] w-full max-w-[648px]'>{description}</p>}
                                 {button &&
@@ -39,7 +39,7 @@ const HomeHeroSection = ({ bannerData, animate }) => {
                                     height={1063}
                                     priority
                                     loading='eager'
-                                    className='absolute inset-0 w-full max-w-[1920px] h-[1063px] -z-10'
+                                    className='absolute inset-0 w-full max-w-[1920px] min-h-[1063px] -z-10'
                                 />
                             ) : (
                                 <video
@@ -51,7 +51,7 @@ const HomeHeroSection = ({ bannerData, animate }) => {
                                     muted
                                     playsInline
                                     loop
-                                    className='absolute inset-0 w-full h-full max-h-screen -z-10 object-cover'
+                                    className='absolute inset-0 w-full h-full min-h-screen -z-10 object-cover'
                                 >
                                     <source src={item.item} type="video/mp4" />
                                 </video>
@@ -59,7 +59,7 @@ const HomeHeroSection = ({ bannerData, animate }) => {
                         </div>
                     );
                 })}
-            </div>
+      
         </div>
     );
 };

@@ -6,6 +6,7 @@ import clsx from "clsx";
 import Button from "../commons/button";
 import DOMPurify from "dompurify";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const PriceRateSection = ({ PriceRateSectiondata, animate }) => {
   const { priceRates, image } = PriceRateSectiondata || {};
@@ -23,17 +24,12 @@ const PriceRateSection = ({ PriceRateSectiondata, animate }) => {
 
   return (
     <div
-      className={clsx("overflow-hidden", image ? "py-28 em:py-40 px-4 sm:px-8 min-h-screen flex flex-col items-center justify-center relative z-10" : "")}
-      style={{
-        backgroundImage: `url(${image})`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      {image && <div className="bg-black/30 px-8 w-full h-full absolute inset-0 -z-10"></div>}
+      className={clsx("overflow-hidden", image ? "py-28 em:py-40 px-4 sm:px-8 min-h-screen flex flex-col items-center justify-center relative z-10" : "")}    >
 
+      <div>
+        <Image src={image} alt='' width={1920} height={1100} loading='eager' className='object-cover absolute inset-0 w-full min-h-screen -z-10 ' />
+        {image && <div className='bg-black/30 px-8 w-full absolute inset-0 -z-10'></div>}
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={animate ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}

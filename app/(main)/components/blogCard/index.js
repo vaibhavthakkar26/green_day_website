@@ -21,13 +21,13 @@ const BlogCard = ({ blogCard }) => {
                                     data-aos-delay={index * 300} // 
                                     data-aos-duration="1000">
                                     <div>
-                                        {image && <div className='border-[1px] w-full max-w-full md:max-w-[550px] lg:max-w-[628px] h-[380px] sm:h-[500px] md:h-[560px] lg:h-[628px] border-white relative pb-5 mb-6'>
+                                        {image && <div className='border-[1px] w-full max-w-full md:max-w-[550px] lg:max-w-[628px]  h-[340px] sm:h-[380px] md:h-[450px] lg:h-[580px] xl:h-[628px] border-white relative pb-5 mb-6'>
                                             <Image
                                                 src={image}
                                                 alt='image'
                                                 width={400}
                                                 height={400}
-                                                className='absolute top-4 -right-4 w-full max-w-full md:max-w-[550px] lg:max-w-[628px] h-[380px] sm:h-[500px] md:h-[560px] lg:h-[628px] object-cover'
+                                                className='absolute top-4 -right-4 w-full max-w-full md:max-w-[550px] lg:max-w-[628px] h-[340px] sm:h-[380px] md:h-[450px] lg:h-[580px] xl:h-[628px] object-cover'
                                             />
                                         </div>}
                                         <span className='text-base italic font-OpenSans mb-5 block'>
