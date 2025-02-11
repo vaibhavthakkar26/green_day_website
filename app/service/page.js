@@ -11,6 +11,7 @@ import Footer from "../(main)/components/commons/footer";
 import Button from "../(main)/components/commons/button";
 import { serviceBanner } from "../../lib/json/pagesData/servicePage/index";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const animations = [
   {
@@ -69,14 +70,8 @@ const Service = () => {
             <SwiperSlide
               key={index}
               className=" w-full  "
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
             >
-              <div className="bg-black/30 px-8 w-full min-h-screen flex flex-col items-center justify-center py-28 md:py-32">
+              <div className="bg-black/30 px-8 w-full h-screen flex flex-col items-center justify-center py-28 md:py-32">
                 <motion.div
                   initial={animationVariant.initial}
                   animate={animate ? animationVariant.animate : animationVariant.initial}
@@ -99,6 +94,7 @@ const Service = () => {
                     </div>
                   )}
                 </motion.div>
+            {image&&    <Image src={image} alt="images" priority loading="eager" width={1920} height={1060} className="absolute inset-0 min-h-screen -z-10 object-cover" />}
               </div>
             </SwiperSlide>
           );

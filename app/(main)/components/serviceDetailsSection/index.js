@@ -95,13 +95,14 @@ const ServiceDetails = ({ deatilsData, className }) => {
                                                     {/* Map Images */}
                                                     {images1.map((item, index) => (
                                                         <div key={index} className="w-full md:w-fit">
-                                                            <Image
+                                                        {item.item&&    <Image
                                                                 src={item.item}
                                                                 alt=""
                                                                 width={500}
                                                                 height={400}
+                                                                loading="eager"
                                                                 className="w-full md:w-auto h-[320px] sm:h-full sm:max-h-[380px] object-cover md:object-contain"
-                                                            />
+                                                            />}
                                                         </div>
                                                     ))}
                                                 </div>
@@ -129,13 +130,14 @@ const ServiceDetails = ({ deatilsData, className }) => {
                                                     {/* Map Images */}
                                                     {images2.map((item, index) => (
                                                         <div key={index} className="w-full md:w-fit">
-                                                            <Image
+                                                           {item.item&& <Image
                                                                 src={item.item}
                                                                 alt=""
                                                                 width={500}
                                                                 height={400}
+                                                                loading="eager"
                                                                 className="w-full md:w-auto h-[320px] sm:h-full sm:max-h-[380px] object-cover md:object-contain"
-                                                            />
+                                                            />}
                                                         </div>
                                                     ))}
                                                 </div>

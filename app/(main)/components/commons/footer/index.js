@@ -47,10 +47,11 @@ const Footer = ({ animate }) => {
 
   const characters = label.split('');
   const angleStep = 360 / characters.length;
+  console.log(backgroundIamge[currentPath], "jjj")
   return (
-    <div  className="relative">
-      { backgroundIamge[currentPath] &&   <Image src={backgroundIamge[currentPath]} alt='' width={1920} height={1100} loading='eager' className='object-cover absolute inset-0 w-full min-h-screen -z-10 ' />}
-      <div className={clsx('overflow-hidden', isImageBackgroundPage ? "bg-black/30 pb-8 pt-28 em:pt-32 min-h-screen flex items-center justify-center" : "py-[100px]")}>
+    <div className="relative">
+      {backgroundIamge[currentPath] && <Image src={backgroundIamge[currentPath]} alt='' width={1920} height={1100} loading='eager' className='object-cover absolute inset-0 w-full min-h-screen -z-10 ' />}
+      <div className={clsx('overflow-hidden', isImageBackgroundPage ? "bg-black/30 pb-8 pt-28 sm:pt-32 min-h-screen flex items-center justify-center" : "py-[100px]")}>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -58,15 +59,15 @@ const Footer = ({ animate }) => {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className='container'>
 
-          <div className={clsx('flex md:flex-row flex-col-reverse gap-y-12 items-center justify-between w-full max-w-[700px] lg:max-w-[900px] xl:max-w-[1060px] ', isImageBackgroundPage ? "pb-8 md:pb-12" : " pb-[60px] md:pb-[80px] lg:pb-[100px]")}>
-            <div className='w-full max-w-[650px]'>
+          <div className={clsx('flex sm:flex-row flex-col gap-y-12 items-center justify-between w-full md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1060px] ', isImageBackgroundPage ? "pb-8 md:pb-12" : " pb-[60px] md:pb-[80px] lg:pb-[100px]")}>
+            <div className='w-full md:max-w-[650px]'>
               <h4 className='font-Dosis font-bold mb-4 em:mb-6 md:mb-[46px] text-white'>{title}</h4>
               <p className='w-full max-w-[536px] text-base sm:text-lg text-white font-OpenSans tracking-[0.65px] pb-4 md:pb-[30px]'>{description}</p>
-              <div className='flex lg:flex-row flex-col w-full justify-between gap-y-6 md:gap-y-8 gap-4'>
+              <div className='flex lg:flex-row flex-col  w-full justify-between gap-y-6 md:gap-y-8 gap-4'>
                 <div className='flex  flex-col items-start  justify-between gap-4 md:gap-y-8'>
                   {ContactUs && ContactUs.map((item, index) => (
                     <Link href={item.link} className='flex items-center gap-2' key={index}>
-                      <Image src={item.icon} alt="icon" width={30} height={30} className='w-[25px] em:w-[30px] h-[25px] em:h-[30px]' />
+                      <Image src={item.icon} alt="icon" width={30} height={30} className='w-[25px] sm:w-[30px] h-[25px] sm:h-[30px]' />
                       <span className='text-lg text-white font-OpenSans'>{item.name}</span>
                     </Link>
                   ))}
@@ -75,16 +76,16 @@ const Footer = ({ animate }) => {
                   <p className='text-base em:text-lg text-white mb-4 font-OpenSans'>{subtitle}</p>
                   {openTime.map((item, index) => (
                     <div className='flex items-center gap-2' key={index}>
-                      <Image src={item.icon} alt="icon" width={30} height={30} className='w-[25px] em:w-[30px] h-[25px] em:h-[30px]' />
+                      <Image src={item.icon} alt="icon" width={30} height={30} className='w-[25px] sm:w-[30px] h-[25px] sm:h-[30px]' />
                       <span className='text-lg text-white font-OpenSans'>{item.dateTime}</span>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className='flex items-center gap-5 mt-6 em:mt-10'>
+              <div className='flex items-center gap-5 mt-6 sm:mt-10'>
                 {socialIcon.map((item, index) => (
                   <Link key={index} href={item.link || "#"}>
-                    <Image src={item.icon} alt="icon" width={30} height={30} className='w-[20px] em:w-[30px] h-[20px] em:h-[30px]' />
+                    <Image src={item.icon} alt="icon" width={30} height={30} className='w-[20px] sm:w-[30px] h-[20px] sm:h-[30px]' />
                   </Link>
                 ))}
               </div>
@@ -108,7 +109,7 @@ const Footer = ({ animate }) => {
               <TopArrow className="w-[40px] em:w-[60px] md:w-[90px] lg:w-[110px] h-[40px] em:h-[60px] md:h-[90px] lg:h-[110px]" />
             </div>
           </div>
-          <p className='text-white text-base em:text-lg pt-2 em:pt-[30px] border-t-[1px] border-white/10 text-center pb-6'>{copyright}</p>
+          <p className='text-white text-base em:text-lg pt-2 sm:pt-[30px] border-t-[1px] border-white/10 text-center pb-6'>{copyright}</p>
         </motion.div>
       </div>
     </div>

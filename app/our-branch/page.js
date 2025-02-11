@@ -11,6 +11,7 @@ import Footer from "../(main)/components/commons/footer";
 import Button from "../(main)/components/commons/button";
 import { ourBranchbanner } from "../../lib/json/pagesData/ourBranchPage/index";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const animations = [
   {
@@ -64,20 +65,15 @@ const Service = () => {
           const { title, description, Titletag, button, image, link, variant } = item;
           const TitleTagComponent = Titletag || "h2";
           const animate = activeIndex === index;
-          const animationVariant = animations[index % animations.length]; 
+          const animationVariant = animations[index % animations.length];
 
           return (
             <SwiperSlide
               key={index}
-              className=" w-full"
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-            >
-              <div className="bg-black/30 min-h-screen flex flex-col items-center justify-center px-8 w-full">
+              className=" w-full"  >
+
+              <div className="bg-black/30 h-screen flex flex-col items-center justify-center px-8 w-full">
+                {image && <Image src={image} alt="images" priority loading="eager" width={1920} height={1060} className="absolute inset-0 min-h-screen -z-10 object-cover" />}
                 <motion.div
                   initial={animationVariant.initial}
                   animate={animate ? animationVariant.animate : animationVariant.initial}
@@ -105,7 +101,7 @@ const Service = () => {
           );
         })}
 
-      
+
         <SwiperSlide className="flex items-center justify-center h-screen bg-black">
           <Footer animate={activeIndex === ourBranchbanner.length} />
         </SwiperSlide>

@@ -24,7 +24,7 @@ const PriceRateSection = ({ PriceRateSectiondata, animate }) => {
 
   return (
     <div
-      className={clsx("overflow-hidden", image ? "py-28 em:py-40 px-4 sm:px-8 min-h-screen flex flex-col items-center justify-center relative z-10" : "")}    >
+      className={clsx("overflow-hidden", image ? "py-28 em:py-40 px-4 sm:px-8 h-screen flex flex-col items-center justify-center relative z-10" : "")}    >
 
       <div>
         <Image src={image} alt='' width={1920} height={1100} loading='eager' className='object-cover absolute inset-0 w-full min-h-screen -z-10 ' />

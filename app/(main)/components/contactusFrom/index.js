@@ -8,17 +8,17 @@ const ContactUsFrom = ({ contactUsFromData }) => {
         {
             label: "Full Name",
             placeholder: "Jhon Deo",
-            image: "/profile.svg"
+            image: "/images/profile.svg"
         },
         {
             label: "Phone Number",
             placeholder: "99999 88888",
-            image: "/mobileIcon.svg"
+            image: "/images/mobileIcon.svg"
         },
         {
             label: "Email ID",
             placeholder: "example@email.com",
-            image: "/emailIcon.svg"
+            image: "/images/emailIcon.svg"
         }
     ]
     return (

@@ -20,11 +20,7 @@ import PriceRateSection from "./(main)/components/priceRateSection";
 import TestimonialSection from "./(main)/components/testimonialSection";
 import Footer from "./(main)/components/commons/footer";
 import HomeHeroSection from "../app/components/homeheroSection/index";
-import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from "react";
-
-
-
+import { useState } from "react";
 
 
 export default function Home() {

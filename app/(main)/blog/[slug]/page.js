@@ -39,7 +39,7 @@ const BlogDetail = () => {
             </label>
             <div className='bg-white/10 border-b-[1px] border-white flex items-center justify-between gap-3 p-2.5'>
               <input placeholder={`Search`} className=' placeholder:text-base placeholder:font-OpenSans placeholder:text-white/50 bg-transparent outline-none block w-full' />
-              <Image src={"/SearchIcon.svg"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
+              <Image src={"/images/SearchIcon.svg"} alt='images' width={30} height={30} className='w-[24px] h-[24px] object-cover' />
             </div>
           </div>
           <div className='mt-[50px]'>
