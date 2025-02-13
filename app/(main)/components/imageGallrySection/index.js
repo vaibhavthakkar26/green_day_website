@@ -11,7 +11,7 @@ const ImageGallrySection = ({ ImageGalleryData }) => {
                     {ImageGallry1.map((item, index) => {
                         const { image } = item || {}
                         return (
-                            <div key={index} className='mb-6 aspect-[16/9] sm:aspect-[4/3] lg:aspect-[3/2]'>
+                            <div key={index} className='mb-6  sm:aspect-[4/3] lg:aspect-[3/2]'>
                                 {image.src && <Image src={image.src} alt='image' width={image.width} height={image.height} className='object-cover' />}
                             </div>
                         )
@@ -24,7 +24,7 @@ const ImageGallrySection = ({ ImageGalleryData }) => {
                     {ImageGallry2.map((item, index) => {
                         const { image } = item || {}
                         return (
-                            <div key={index} className="mb-6 relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[3/2]">
+                            <div key={index} className="mb-6 relative  sm:aspect-[4/3] lg:aspect-[3/2]">
                                 {image.src && <Image
                                     src={image.src}
                                     alt="image"

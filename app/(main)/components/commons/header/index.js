@@ -54,7 +54,7 @@ const Header = () => {
 
                                 <div className='flex flex-col gap-4 em:gap-6 pt-[25px] em:pt-[50px] md:pt-[62px]'>
                                     {navitemData.map((item, index) => (
-                                        <h4 key={index} className='text-[28px] md:text-[36px]  leading-[130%]'>
+                                        <h4 key={index} className= 'text-[24px] em:text-[28px] md:text-[36px]  leading-[130%]'>
                                             <Link href={item.link} onClick={handleClose} className='text-white hover:text-white/70 font-Dosis font-semibold basic-transition '>
                                                 {item.item}
                                             </Link>

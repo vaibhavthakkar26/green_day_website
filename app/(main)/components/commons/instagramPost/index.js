@@ -13,7 +13,16 @@ const InstagramPost = ({ instagramPostData }) => {
                             const { post, button } = item || {}
                             return (
                                 <div key={index} className='h-full flex flex-col items-center justify-center'>
-                                    {post && <Image src={post} alt='image' loading='eager' width={300} height={300} className='w-full max-w-full lg:max-w-[257px] h-[220px] sm:h-[257px] object-cover' />}
+                                    {post && (
+                                        <Image
+                                            src={post}
+                                            alt="image"
+                                            loading="eager"
+                                            width={300}
+                                            height={300}
+                                            className="w-full max-w-full lg:max-w-[257px] h-auto aspect-[4/4] object-cover"
+                                        />
+                                    )}
                                     {button && <div
                                         className='w-full max-w-[180px] sm:max-w-[209px] h-[180px] sm:h-[209px] border-[1px] border-white relative mx-auto '>
                                         <button className='bg-[#272727] text-[28px] sm:text-[35px] font-semibold text-white font-Dosis px-4 flex flex-col items-center justify-center w-full h-full absolute top-2 right-2'>
