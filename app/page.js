@@ -20,15 +20,43 @@ import PriceRateSection from "./(main)/components/priceRateSection";
 import TestimonialSection from "./(main)/components/testimonialSection";
 import Footer from "./(main)/components/commons/footer";
 import HomeHeroSection from "../app/components/homeheroSection/index";
-import { useState } from "react";
-
+import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    // Check if the URL contains a hash and navigate to the appropriate section
+    const navigateToHashSection = () => {
+      if (window.location.hash) {
+        const hash = window.location.hash.substring(1); // Get hash without '#'
+        const sectionIndexes = {
+          pricing: 4, // Change this index based on your Swiper order
+        };
+
+        if (sectionIndexes[hash] !== undefined && swiperRef.current) {
+          swiperRef.current.slideTo(sectionIndexes[hash]); // Navigate to the correct slide
+        }
+      }
+    };
+
+
+    setTimeout(navigateToHashSection, 500); 
+
+
+    window.addEventListener("hashchange", navigateToHashSection);
+
+    return () => {
+     
+      window.removeEventListener("hashchange", navigateToHashSection);
+    };
+  }, []);
 
   return (
     <div className="relative">
       <Swiper
+        onSwiper={(swiper) => (swiperRef.current = swiper)} // Store Swiper instance
         direction="vertical"
         slidesPerView={1}
         spaceBetween={30}
@@ -39,17 +67,14 @@ export default function Home() {
         modules={[EffectFade, Mousewheel, Autoplay]}
         className="h-screen"
         speed={500}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} 
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         <SwiperSlide>
-          <HomeHeroSection bannerData={banner}       animate={activeIndex === 0}  />
+          <HomeHeroSection bannerData={banner} animate={activeIndex === 0} />
         </SwiperSlide>
 
         <SwiperSlide>
-          <GreenDaySpaSection
-            GreenDaySpaData={welcomDaySpa}
-            animate={activeIndex === 1} // Only animate when this slide is active
-          />
+          <GreenDaySpaSection GreenDaySpaData={welcomDaySpa} animate={activeIndex === 1} />
         </SwiperSlide>
 
         <SwiperSlide>
@@ -60,12 +85,12 @@ export default function Home() {
           <TestimonialSection TestimonialData={homeTestimonial} animate={activeIndex === 3} />
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide id="pricing">
           <PriceRateSection PriceRateSectiondata={PriceRatedata} animate={activeIndex === 4} />
         </SwiperSlide>
 
         <SwiperSlide>
-          <Footer  animate={activeIndex === 5} />
+          <Footer animate={activeIndex === 5} />
         </SwiperSlide>
       </Swiper>
     </div>
